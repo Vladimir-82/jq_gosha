@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="test">
+        TEST1
+    </div>
+    <div class="test">
+        TEST1
+    </div>
+    <p class="test">
+        TEST3
+    </p>
+    <p class="test">
+        TEST4
+    </p>
+    <script type="text/javascript">
+        var test = $('div.test');
+        for(var i = 0; i < test.length; i++)
+            test.get(i).style.color = "red";
+
+        setTimeout("$('p.test').get(0).remove()", 2000)
+    </script>
+</body>
+</html>
