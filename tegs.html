@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="test">
+        TEST1
+    </div>
+    <div class="test">
+        TEST1
+    </div>
+    <p class="test">
+        TEST3
+    </p>
+    <p class="test">
+        TEST4
+    </p>
+
+    <img src="1.jpg" alt="1">
+    <img src="2.jpg" alt="2" title="2">
+
+    <script type="text/javascript">
+      var test = $("div");
+      alert(test.length);
+
+      var img = $("img[title]");
+      alert(img.length)
+    </script>
+</body>
+</html>
