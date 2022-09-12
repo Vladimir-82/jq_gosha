@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Styles</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="sdft">Just Block</div>
+
+    <script type="text/javascript">
+        $("#sdft").css("font-size", "30px")
+        $("#sdft").css("color", "red")
+
+        $("#sdft").css("background-color", function () {
+            return "blue";
+        });
+        $("#sdft").css("width", "350px");
+
+        $("#sdft").css("height", function () {
+            var h = prompt("Введите высоту: ");
+            return h + 'px'
+        });
+
+    </script>
+</body>
+</html>
