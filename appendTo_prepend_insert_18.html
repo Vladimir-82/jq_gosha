@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Styles</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="sdft1" style="background-color: gold">Just Block1
+        <p>Абцац</p>
+    </div>
+
+    <div id="sdft2" style="background-color: aquamarine">Just Block2
+        <p>Абцацацац</p>
+    </div>
+
+    <div id="sdft3" style="background-color: red">Just Block3
+        <p>Абцацацацец</p>
+    </div>
+
+    <script type="text/javascript">
+      $("<p>append_text</p>").appendTo("#sdft1")
+      $("<p>prepend_text</p>").prependTo("#sdft2")
+      $("<p>insert_before_text</p>").insertBefore("#sdft3")
+      $("<p>insert_after_text</p>").insertAfter("#sdft3")
+    </script>
+</body>
+</html>
