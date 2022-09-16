@@ -5,24 +5,37 @@
     <title>Styles</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $("#img").bind("click", function (event) {
-                $(event.target).parent().css("text-align", "center");
-                if ($("#img").not("img[alt]"))
-                    $(event.target).animate({
-                        width: $(event.target).width() * 5,
-                        height: $(event.target).height() * 5,
-
+        function IncreseImage () {
+            $("#img").animate({
+                    width: $("#img").width() * 5,
+                    height: $("#img").height() * 5,
                 }, 3000);
-                    $("#img").attr("alt", 'increase')
+        }
+        function DecreseImage () {
+            $("#img").animate({
+                    width: $("#img").width(),
+                    height: $("#img").height(),
+                }, 3000);
+            $("#img").attr("alt", "small");
+        }
+        $(document).ready(function () {
 
+                $("#img").parent().css("text-align", "center");
+                var ch = $('#img').attr("alt");
+                if (ch === "small") {
+                    $(document).on("click", '#img', IncreseImage);
+                    $("#img").attr("alt", "big");
+                } else {
+                    $(document).on("click", '#img', DecreseImage);
+                    $("#img").attr("alt", "small");
+                }
             });
-        });
+
     </script>
 </head>
 <body>
     <p>
-        <img src="https://1.bp.blogspot.com/-KZa6XktH5xY/WlHX117BB9I/AAAAAAAAKCo/q3VklH3TClQaW0ur5ke6Cm-8MJMX3eXRACEwYBhgL/s320/1485549014271.jpg" title="Изображение" id="img" width="200">
+        <img src="https://1.bp.blogspot.com/-KZa6XktH5xY/WlHX117BB9I/AAAAAAAAKCo/q3VklH3TClQaW0ur5ke6Cm-8MJMX3eXRACEwYBhgL/s320/1485549014271.jpg" title="Изображение" alt="small" id="img" width="200">
     </p>
 </body>
 </html>
