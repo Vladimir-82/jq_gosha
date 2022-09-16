@@ -5,7 +5,18 @@
     <title>Styles</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
-        $("#img").parent().css("text-align", "center");
+        $(document).ready(function () {
+            $("#img").bind("click", function (event) {
+                $(event.target).parent().css("text-align", "center");
+                $(event.target).animate({
+                    width: $(event.target).width() * 5,
+                    height: $(event.target).height() * 5,
+
+
+
+                }, 3000);
+            });
+        });
      </script>
 </head>
 <body>
@@ -15,58 +26,3 @@
 
 </body>
 </html>
-
-
-
-<!--<script type="text/javascript">-->
-<!--        let flag = false;-->
-<!--        $('#img').on('click',function(){-->
-<!--        if(flag == false) {-->
-<!--            flag = true;-->
-<!--            $("#img").animate({-->
-<!--                width: $("#img").width() * 5,-->
-<!--                height: $("#img").height() * 5,-->
-<!--            }, 3000);-->
-<!--        }-->
-<!--        else {-->
-<!--            flag = false;-->
-<!--            $("#img").animate({-->
-<!--                width: $("#img").width() / 5,-->
-<!--                height: $("#img").height() / 5,-->
-<!--            }, 3000);-->
-<!--        }-->
-<!--})-->
-
-
-
-
-
-
-<!--<script type="text/javascript">-->
-<!--        function IncreseImage () {-->
-<!--            $("#img").animate({-->
-<!--                    width: $("#img").width() * 5,-->
-<!--                    height: $("#img").height() * 5,-->
-<!--                }, 3000);-->
-<!--        }-->
-<!--        function DecreseImage () {-->
-<!--            $("#img").animate({-->
-<!--                    width: $("#img").width(),-->
-<!--                    height: $("#img").height(),-->
-<!--                }, 3000);-->
-<!--            $("#img").attr("alt", "small");-->
-<!--        }-->
-<!--        $(document).ready(function () {-->
-<!--            -->
-<!--                $("#img").parent().css("text-align", "center");-->
-<!--                var ch = $('#img').attr("alt");-->
-<!--                if (ch === "small") {-->
-<!--                    $(document).on("click", '#img', IncreseImage);-->
-<!--                    $("#img").attr("alt", "big");-->
-<!--                } else {-->
-<!--                    $(document).on("click", '#img', DecreseImage);-->
-<!--                    $("#img").attr("alt", "small");-->
-<!--                }-->
-<!--            });-->
-
-<!--    </script>-->
