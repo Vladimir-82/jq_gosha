@@ -5,33 +5,8 @@
     <title>Styles</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
-        function IncreseImage () {
-            $("#img").animate({
-                    width: $("#img").width() * 5,
-                    height: $("#img").height() * 5,
-                }, 3000);
-        }
-        function DecreseImage () {
-            $("#img").animate({
-                    width: $("#img").width(),
-                    height: $("#img").height(),
-                }, 3000);
-            $("#img").attr("alt", "small");
-        }
-        $(document).ready(function () {
-
-                $("#img").parent().css("text-align", "center");
-                var ch = $('#img').attr("alt");
-                if (ch === "small") {
-                    $(document).on("click", '#img', IncreseImage);
-                    $("#img").attr("alt", "big");
-                } else {
-                    $(document).on("click", '#img', DecreseImage);
-                    $("#img").attr("alt", "small");
-                }
-            });
-
-    </script>
+        $("#img").parent().css("text-align", "center");
+     </script>
 </head>
 <body>
     <p>
@@ -40,3 +15,58 @@
 
 </body>
 </html>
+
+
+
+<!--<script type="text/javascript">-->
+<!--        let flag = false;-->
+<!--        $('#img').on('click',function(){-->
+<!--        if(flag == false) {-->
+<!--            flag = true;-->
+<!--            $("#img").animate({-->
+<!--                width: $("#img").width() * 5,-->
+<!--                height: $("#img").height() * 5,-->
+<!--            }, 3000);-->
+<!--        }-->
+<!--        else {-->
+<!--            flag = false;-->
+<!--            $("#img").animate({-->
+<!--                width: $("#img").width() / 5,-->
+<!--                height: $("#img").height() / 5,-->
+<!--            }, 3000);-->
+<!--        }-->
+<!--})-->
+
+
+
+
+
+
+<!--<script type="text/javascript">-->
+<!--        function IncreseImage () {-->
+<!--            $("#img").animate({-->
+<!--                    width: $("#img").width() * 5,-->
+<!--                    height: $("#img").height() * 5,-->
+<!--                }, 3000);-->
+<!--        }-->
+<!--        function DecreseImage () {-->
+<!--            $("#img").animate({-->
+<!--                    width: $("#img").width(),-->
+<!--                    height: $("#img").height(),-->
+<!--                }, 3000);-->
+<!--            $("#img").attr("alt", "small");-->
+<!--        }-->
+<!--        $(document).ready(function () {-->
+<!--            -->
+<!--                $("#img").parent().css("text-align", "center");-->
+<!--                var ch = $('#img').attr("alt");-->
+<!--                if (ch === "small") {-->
+<!--                    $(document).on("click", '#img', IncreseImage);-->
+<!--                    $("#img").attr("alt", "big");-->
+<!--                } else {-->
+<!--                    $(document).on("click", '#img', DecreseImage);-->
+<!--                    $("#img").attr("alt", "small");-->
+<!--                }-->
+<!--            });-->
+
+<!--    </script>-->
